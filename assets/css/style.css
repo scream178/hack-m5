@@ -1,0 +1,328 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #7f7f7f;
+    color: #dfdfdf;
+}
+/* ------------Header---------------- */
+#header{
+    width: 100%;
+    height: 100vh;
+    background-image: url(Images/e_cover01.jpeg) ;
+    background-size: cover;
+    background-position: center;   
+}
+.container{
+    padding: 10px 10%;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.logo{
+    width: 220px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 20px;   
+}
+nav ul li a{
+    color: #808080;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    position: relative;
+}
+nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 5px;
+    background: #205867;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.6s;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+.header-text{
+    margin-top: 20%;
+    font-size: 30px;
+    color:#808080 ;
+}
+.header-text p{
+    font-weight: 500;
+}
+.header-text p span {
+    color: #205867;
+    padding-bottom: 4px;
+    letter-spacing: 1px;
+    border-bottom: 5px solid #808080;
+}
+.header-text h1{
+    font-size: 50px;
+    margin-top: 20px;    
+}
+.header-text h1 span{
+    color: #205867;
+}
+/***************** Website ***************/
+#websites{
+    padding: 50px 0;
+}
+.gallerys{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    position: relative;
+}
+.gallerys h1{
+    color: #205867;
+    padding: 15px 0;
+    letter-spacing: 5px;
+    font-size: 45px;
+}
+/****************** Contact ********************/
+#contact{
+    background: #205867;   
+}
+.btn.btn2{
+    display: inline-block;
+    background: #7f7f7f;
+    color: #c6c6c6;
+    border-radius: 5px;
+}
+.btn{
+    font-weight: 500;
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 3px solid #205867;
+    padding: 14px 50px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #c6c6c6;
+    background: #205867;
+    transition: 0.5s;
+}
+.btn:hover{
+    transform: scale(1.1);
+}
+form input, form textarea{
+    width: 100%;
+    border: 0;
+    outline: none;
+    background: #c6c6c6;
+    padding: 15px;
+    margin: 15px 0;
+    color: #7f7f7f;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 500;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #c6c6c6;
+    font-weight: 600;
+    margin-top: 0px;
+    color: #7f7f7f;
+}
+
+/* Resume styles */
+.resume {
+    margin-top: 20px;
+    border: 5px solid #7f7f7f;
+    border-radius: 10px;
+}
+
+.resume h1 {
+    color: #c6c6c6;
+    font-size: 36px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.resume p {
+    margin: 5px 0;
+    font-size: 16px;
+    margin-top: -15px;
+    margin-bottom: 25px;
+    margin-left: 100px;
+}
+
+.resume a {
+    color: #7f7f7f;
+    text-decoration: none;
+}
+
+.resume a:hover {
+    text-decoration: underline;
+}
+
+.resume h3 {
+    color: #c6c6c6;
+    font-size: 20px;
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+button {
+    display: flex;
+    text-align: center;
+    background: #7f7f7f;
+    color: #c6c6c6;
+    border: none;
+    border-radius: 5px;
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.1)
+}
+
+.copyright i{
+    color: #ff004f;
+}
+/* *****CSS FOR SMMALL SCREENS ***************/
+nav .fa-solid{
+    display: none;
+    color: #808080 ;
+}
+
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url(Images/e_cover02.jpeg);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 21px;
+
+    }
+    .header-text h1{
+        font-size: 30px;
+
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 26px;
+        
+    }
+    nav ul{
+        background: #205867;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        width: 250px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.6s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+
+    }
+    nav ul li a{
+        color: #c6c6c6;
+        font-size: 21px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+        color: #c6c6c6;
+        
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+
+    }
+    .services-list div h2{
+        font-size: 26px;
+        text-align: center;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    
+    .gallery h1{
+        font-size: 40px;
+    }
+    .gallery h5{
+        font-size: 16px;
+    }
+    .col{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .col img{
+        width: auto;
+        height: 200px;
+        padding: 15px ;
+        
+    }
+    .gallerys h1{
+        font-size: 30px;
+        
+    }
+    .cols video{
+        width: 100%;
+        height: 100%;
+    }
+    .cols img{
+        width: 100%;
+        height: 100%;
+    }
+}
+#msg{
+    color: #61b752;
+    margin-top: -40px;
+    display: block;
+}
